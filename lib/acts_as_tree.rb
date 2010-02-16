@@ -77,6 +77,10 @@ module ActsAsTree
       node
     end
 
+    def root?
+      !self.parent
+    end
+
     # Returns all siblings of the current node.
     #
     #   subchild1.siblings # => [subchild2]
